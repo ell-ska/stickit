@@ -1,0 +1,18 @@
+:root {
+    --grid-container: minmax(2rem, 1fr) minmax(0, 80rem) minmax(2rem, 1fr);
+
+    --color-primary: #0D2237;
+    --color-secondary: #fff;
+
+    --color-sticky-1: #8FB8DB;
+    --color-sticky-2: #FAAA77;
+    --color-sticky-3: #F67068;
+    --color-sticky-4: #BECFBB;
+
+    --font-primary: 'Work Sans', sans-serif;
+    --font-base: 1rem;
+    --font-scale: 1.25;
+    --font-size-1: var(--font-base);
+    --font-size-2: calc(var(--font-size-1) * var(--font-scale));
+    --font-size-3: calc(var(--font-size-2) * var(--font-scale));
+}

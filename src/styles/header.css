@@ -1,0 +1,50 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding-block: 2rem;
+}
+
+.branding span {
+    position: relative;
+    font-size: var(--font-size-3);
+    font-weight: bold;
+}
+
+.branding span::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: -2px;
+    right: -2px;
+    bottom: 0;
+    height: 10px;
+    background-color: var(--color-sticky-1);
+    transform: skew(-10deg);
+}
+
+.menu-button {
+    position: relative;
+    background-color: var(--color-primary);
+    height: 1rem;
+    width: 1rem;
+}
+
+/* .menu-button div,
+.menu-button div::before,
+.menu-button div::after {
+    height: 4px;
+    width: 4px;
+    border-radius: 50%;
+    background-color: var(--color-primary);
+}
+
+.menu-button div::before,
+.menu-button div::after {
+    content: '';
+    position: absolute;
+    left: -8px;
+}
+
+.menu-button div::after {
+    left: -16px;
+} */
