@@ -23,6 +23,18 @@ function App() {
     }
   ])
 
+  const addSticky = () => {
+
+    const sticky = {
+      text: '',
+      color: stickyColors[Math.floor(Math.random() * stickyColors.length)],
+      id: nanoid()
+    }
+
+    setStickies([...stickes, sticky])
+
+  }
+
   return (
     <div className="app">
       <Header></Header>
