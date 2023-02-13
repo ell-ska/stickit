@@ -2,6 +2,7 @@
     --grid-container: minmax(2rem, 1fr) minmax(0, 80rem) minmax(2rem, 1fr);
 
     --color-primary: #0D2237;
+    --color-primary-20: #0D223733;
     --color-secondary: #fff;
 
     --color-sticky-1: #8FB8DB;

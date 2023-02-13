@@ -28,13 +28,23 @@
     background-color: var(--color-sticky-4);
 }
 
-.sticky p {
+.sticky textarea {
+    height: 100%;
+    width: 100%;
+    border: none;
+    background: none;
     font-size: var(--font-size-1);
     line-height: 1.5rem;
+    resize: none;
+    appearance: none;
+}
+
+.sticky textarea:focus {
+    outline: none;
 }
 
 .sticky--add {
-    --color-sticky-active: var(--color-sticky-1);
+    --color-sticky-active: var(--color-primary-20);
 
     display: flex;
     justify-content: center;
@@ -48,6 +58,7 @@
     position: relative;
     width: 24px;
     height: 24px;
+    pointer-events: none;
 }
 
 .sticky--add .sticky__icon::before,
