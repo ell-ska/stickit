@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react'
 import { nanoid } from 'nanoid'
+import Header from './components/header'
 import Sticky from './components/sticky'
 import AddSticky from './components/addSticky'
-import Header from './components/header'
+import Toolbar from './components/toolbar'
 import './styles/base.css'
 import './styles/variables.css'
 
@@ -50,6 +51,7 @@ function App() {
         })}
         <AddSticky addSticky={addSticky}></AddSticky>
       </section>
+      <Toolbar></Toolbar>
     </div>
   )
 }

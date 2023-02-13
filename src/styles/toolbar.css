@@ -1,0 +1,67 @@
+.toolbar {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    display: flex;
+    border: 2px solid var(--color-primary);
+    border-bottom: none;
+    border-radius: 1rem 1rem 0 0;
+    background-color: var(--color-secondary);
+    transform: translateX(-50%);
+}
+
+.text,
+.color,
+.delete {
+    display: flex;
+    gap: 2rem;
+    padding: 1rem 3rem;
+}
+
+.text__bold {
+    font-weight: bold;
+}
+
+.text__italic {
+    font-style: italic;
+}
+
+.text__underline {
+    text-decoration: underline;
+}
+
+.text__strikethrough {
+    text-decoration: line-through;
+}
+
+.color {
+    border-inline: 2px solid var(--color-primary);
+}
+
+.color__swatch {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    background-color: red;
+}
+
+.color__swatch--1 {
+    background-color: var(--color-sticky-1);
+}
+
+.color__swatch--2 {
+    background-color: var(--color-sticky-2);
+}
+
+.color__swatch--3 {
+    background-color: var(--color-sticky-3);
+}
+
+.color__swatch--4 {
+    background-color: var(--color-sticky-4);
+}
+
+.delete {
+    font-weight: bold;
+    font-size: var(--font-size-2);
+}
