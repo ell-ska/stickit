@@ -43,6 +43,10 @@
     outline: none;
 }
 
+.sticky:has(textarea:focus) {
+    outline: 2px solid var(--color-primary);
+}
+
 .sticky--add {
     --color-sticky-active: var(--color-primary-20);
 

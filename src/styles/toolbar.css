@@ -1,6 +1,6 @@
 .toolbar {
     position: fixed;
-    bottom: 0;
+    bottom: -100%;
     left: 50%;
     display: flex;
     border: 2px solid var(--color-primary);
@@ -8,6 +8,10 @@
     border-radius: 1rem 1rem 0 0;
     background-color: var(--color-secondary);
     transform: translateX(-50%);
+}
+
+.toolbar--active {
+    bottom: 0;
 }
 
 .text,
@@ -42,7 +46,6 @@
     width: 2rem;
     height: 2rem;
     border-radius: 50%;
-    background-color: red;
 }
 
 .color__swatch--1 {
