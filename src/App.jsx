@@ -52,6 +52,15 @@ function App() {
     
   }
 
+  const deleteSticky = () => {
+
+    const allStickies = stickes
+    const allExceptDeletedSticky = allStickies.filter(sticky => sticky.id !== activeSticky)
+
+    setStickies(allExceptDeletedSticky)
+
+  }
+
   return (
     <div className="app">
       <Header></Header>
@@ -61,7 +70,7 @@ function App() {
         })}
         <AddSticky addSticky={addSticky}></AddSticky>
       </section>
-      {toolbarStatus ? <Toolbar activeSticky={activeSticky} /> : null}
+      {toolbarStatus ? <Toolbar activeSticky={activeSticky} deleteSticky={deleteSticky} /> : null}
     </div>
   )
 }

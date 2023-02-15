@@ -1,8 +1,6 @@
 import '../styles/toolbar.css'
 
-const Toolbar = ({ activeSticky }) => {
-
-    console.log(activeSticky)
+const Toolbar = ({ activeSticky, deleteSticky }) => {
 
     return (
         <div className="toolbar">
@@ -19,7 +17,7 @@ const Toolbar = ({ activeSticky }) => {
                 <button className="color__swatch color__swatch--4"></button>
             </div>
             <div className="delete">
-                <button className="delete__button">Delete</button>
+                <button className="delete__button" onClick={() => deleteSticky()}>Delete</button>
             </div>
         </div>
     )
