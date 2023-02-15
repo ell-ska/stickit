@@ -11,7 +11,7 @@ const Sticky = ({ text, color, id, saveStickyText, stickyActive }) => {
                     const inputValue = e.target.value
                     saveStickyText(id, inputValue)
                 }}
-                onClick={() => stickyActive(true, id)}
+                onFocus={() => stickyActive(true, id)}
                 // onBlur={() => stickyActive(false, id)}
             ></textarea>
         </div>

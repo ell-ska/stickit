@@ -11,13 +11,13 @@ function App() {
 
   const stickyColors = ['--color-sticky-1', '--color-sticky-2', '--color-sticky-3', '--color-sticky-4']
 
-  const [stickes, setStickies] = useState(() => {
+  const [stickies, setStickies] = useState(() => {
     return JSON.parse(localStorage.getItem('stickies')) || []
   })
 
   useEffect(() => {
-    localStorage.setItem('stickies', JSON.stringify(stickes))
-  }, [stickes])
+    localStorage.setItem('stickies', JSON.stringify(stickies))
+  }, [stickies])
 
   const addSticky = () => {
 
@@ -27,13 +27,13 @@ function App() {
       id: nanoid()
     }
 
-    setStickies([...stickes, sticky])
+    setStickies([...stickies, sticky])
 
   }
 
   const saveStickyText = (id, inputValue) => {
 
-    const allStickies = stickes
+    const allStickies = stickies
 
     const updatedSticky = allStickies.find(sticky => sticky.id === id)
     updatedSticky.text = inputValue
@@ -54,7 +54,7 @@ function App() {
 
   const deleteSticky = () => {
 
-    const allStickies = stickes
+    const allStickies = stickies
     const allExceptDeletedSticky = allStickies.filter(sticky => sticky.id !== activeSticky)
 
     setStickies(allExceptDeletedSticky)
@@ -63,7 +63,7 @@ function App() {
 
   const changeStickyColor = (newColor) => {
 
-    const allStickies = stickes
+    const allStickies = stickies
 
     const updatedSticky = allStickies.find(sticky => sticky.id === activeSticky)
     updatedSticky.color = newColor
@@ -76,7 +76,7 @@ function App() {
     <div className="app">
       <Header></Header>
       <section className="sticky-container">
-        {stickes.map(sticky => {
+        {stickies.map(sticky => {
           return <Sticky key={sticky.id} {...sticky} saveStickyText={saveStickyText} stickyActive={stickyActive}></Sticky>
         })}
         <AddSticky addSticky={addSticky}></AddSticky>
