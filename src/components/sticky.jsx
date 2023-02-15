@@ -12,7 +12,7 @@ const Sticky = ({ text, color, id, saveStickyText, stickyActive }) => {
                     saveStickyText(id, inputValue)
                 }}
                 onClick={() => stickyActive(true, id)}
-                onBlur={() => stickyActive(false, id)}
+                // onBlur={() => stickyActive(false, id)}
             ></textarea>
         </div>
     )

@@ -48,19 +48,19 @@
     border-radius: 50%;
 }
 
-.color__swatch--1 {
+.color__swatch--color-sticky-1 {
     background-color: var(--color-sticky-1);
 }
 
-.color__swatch--2 {
+.color__swatch--color-sticky-2 {
     background-color: var(--color-sticky-2);
 }
 
-.color__swatch--3 {
+.color__swatch--color-sticky-3 {
     background-color: var(--color-sticky-3);
 }
 
-.color__swatch--4 {
+.color__swatch--color-sticky-4 {
     background-color: var(--color-sticky-4);
 }
 

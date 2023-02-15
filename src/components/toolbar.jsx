@@ -1,6 +1,6 @@
 import '../styles/toolbar.css'
 
-const Toolbar = ({ deleteSticky }) => {
+const Toolbar = ({ deleteSticky, changeStickyColor, stickyColors }) => {
 
     return (
         <div className="toolbar">
@@ -11,10 +11,9 @@ const Toolbar = ({ deleteSticky }) => {
                 <button className="text__strikethrough">S</button>
             </div>
             <div className="color">
-                <button className="color__swatch color__swatch--1"></button>
-                <button className="color__swatch color__swatch--2"></button>
-                <button className="color__swatch color__swatch--3"></button>
-                <button className="color__swatch color__swatch--4"></button>
+                {stickyColors.map(color => {
+                    return <button key={color} className={"color__swatch color__swatch" + color} onClick={() => changeStickyColor(color)}></button>
+                })}
             </div>
             <div className="delete">
                 <button className="delete__button" onClick={() => deleteSticky()}>Delete</button>

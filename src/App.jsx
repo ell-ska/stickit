@@ -61,6 +61,17 @@ function App() {
 
   }
 
+  const changeStickyColor = (newColor) => {
+
+    const allStickies = stickes
+
+    const updatedSticky = allStickies.find(sticky => sticky.id === activeSticky)
+    updatedSticky.color = newColor
+
+    setStickies([...allStickies])
+
+  }
+
   return (
     <div className="app">
       <Header></Header>
@@ -70,7 +81,7 @@ function App() {
         })}
         <AddSticky addSticky={addSticky}></AddSticky>
       </section>
-      {toolbarStatus ? <Toolbar deleteSticky={deleteSticky} /> : null}
+      {toolbarStatus ? <Toolbar deleteSticky={deleteSticky} changeStickyColor={changeStickyColor} stickyColors={stickyColors}/> : null}
     </div>
   )
 }
