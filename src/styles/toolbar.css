@@ -1,6 +1,6 @@
 .toolbar {
     position: fixed;
-    bottom: -100%;
+    bottom: 0;
     left: 50%;
     display: flex;
     border: 2px solid var(--color-primary);

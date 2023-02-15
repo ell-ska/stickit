@@ -1,6 +1,8 @@
 import '../styles/toolbar.css'
 
-const Toolbar = () => {
+const Toolbar = ({ activeSticky }) => {
+
+    console.log(activeSticky)
 
     return (
         <div className="toolbar">

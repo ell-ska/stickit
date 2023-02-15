@@ -42,16 +42,26 @@ function App() {
 
   }
 
+  const [toolbarStatus, setToolbarStatus] = useState(false)
+  const [activeSticky, setActiveSticky] = useState('')
+
+  const handleToolbar = (toolbarCurrentStatus, clickedStickyId) => {
+
+    setToolbarStatus(() => toolbarCurrentStatus)
+    setActiveSticky(() => clickedStickyId)
+    
+  }
+
   return (
     <div className="app">
       <Header></Header>
       <section className="sticky-container">
         {stickes.map(sticky => {
-          return <Sticky key={sticky.id} {...sticky} saveStickyText={saveStickyText}></Sticky>
+          return <Sticky key={sticky.id} {...sticky} saveStickyText={saveStickyText} handleToolbar={handleToolbar}></Sticky>
         })}
         <AddSticky addSticky={addSticky}></AddSticky>
       </section>
-      <Toolbar></Toolbar>
+      {toolbarStatus ? <Toolbar activeSticky={activeSticky} /> : null}
     </div>
   )
 }
