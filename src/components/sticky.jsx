@@ -1,6 +1,6 @@
 import '../styles/sticky.css'
 
-const Sticky = ({ text, color, id, saveStickyText, handleToolbar }) => {
+const Sticky = ({ text, color, id, saveStickyText, stickyActive }) => {
 
     return (
         <div className={`sticky sticky${color}`}>
@@ -11,7 +11,8 @@ const Sticky = ({ text, color, id, saveStickyText, handleToolbar }) => {
                     const inputValue = e.target.value
                     saveStickyText(id, inputValue)
                 }}
-                onClick={() => handleToolbar(true, id)}
+                onClick={() => stickyActive(true, id)}
+                onBlur={() => stickyActive(false, id)}
             ></textarea>
         </div>
     )

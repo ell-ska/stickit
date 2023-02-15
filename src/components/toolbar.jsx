@@ -1,6 +1,6 @@
 import '../styles/toolbar.css'
 
-const Toolbar = ({ activeSticky, deleteSticky }) => {
+const Toolbar = ({ deleteSticky }) => {
 
     return (
         <div className="toolbar">
