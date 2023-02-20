@@ -14,7 +14,7 @@
     bottom: 0;
 }
 
-.text,
+/* .text, */
 .color,
 .delete {
     display: flex;
@@ -22,7 +22,7 @@
     padding: 1rem 3rem;
 }
 
-.text__bold {
+/* .text__bold {
     font-weight: bold;
 }
 
@@ -36,10 +36,10 @@
 
 .text__strikethrough {
     text-decoration: line-through;
-}
+} */
 
 .color {
-    border-inline: 2px solid var(--color-primary);
+    border-right: 2px solid var(--color-primary);
 }
 
 .color__swatch {
