@@ -31,6 +31,8 @@ button {
 .app {
     display: grid;
     grid-template-columns: var(--grid-container);
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
 }
 
 header,

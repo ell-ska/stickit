@@ -12,6 +12,10 @@
     aspect-ratio: 1 / 1;
 }
 
+.dark .sticky {
+    color: var(--color-secondary);
+}
+
 .sticky--color-sticky-1 {
     background-color: var(--color-sticky-1);
 }

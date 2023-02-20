@@ -17,3 +17,28 @@
     --font-size-2: calc(var(--font-size-1) * var(--font-scale));
     --font-size-3: calc(var(--font-size-2) * var(--font-scale));
 }
+
+.original {
+    --color-sticky-1: #8FB8DB;
+    --color-sticky-2: #FAAA77;
+    --color-sticky-3: #F67068;
+    --color-sticky-4: #BECFBB;
+}
+
+.vivid {
+    --color-sticky-1: #D45898;
+    --color-sticky-2: #BEC456;
+    --color-sticky-3: #E6723B;
+    --color-sticky-4: #ECDC49;
+}
+
+.dark {
+    --color-primary: #fff;
+    --color-primary-20: #FFFFFF33;
+    --color-secondary: #0D2237;
+
+    --color-sticky-1: #8AA9F9;
+    --color-sticky-2: #E0787B;
+    --color-sticky-3: #BF94E4;
+    --color-sticky-4: #CAE797;
+}
